@@ -10,9 +10,13 @@ public class Library {
         System.out.println("Kirja lisätty kirjastoon!");
     }
 
+    public ArrayList<Book> getBooks() {
+        return books;
+    }
+
     public void listBooks() {
         int amountOfBooks = 0;
-        for (Book book : books) {
+        for (Book book : getBooks()) {
             book.displayInfo();
             System.out.println("Kirjan kategoria: " + book.categorize());
             amountOfBooks += book.copies;
